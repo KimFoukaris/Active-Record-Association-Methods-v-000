@@ -7,7 +7,7 @@ class Song < ActiveRecord::Base
   end
 
   def drake_made_this
-    self.artist_id = 2
+    self.artist = Artist.where("name = 'Drake'")
     #binding.pry
     # when this method is called it should assign the song's artist to Drake
   end
